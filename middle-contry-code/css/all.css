@@ -1,0 +1,117 @@
+body {
+  background: #9f9f9f;
+  font: 18px/29px Helvetica, Arial, sans-serif;
+  color: #0f0f0f;
+  padding: 50vh 0;
+}
+form {
+  width: 320px;
+  margin: 0 auto 76px;
+  background: #fff;
+  padding: 18px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+.open {
+  z-index: 2;
+}
+.phone-input {
+  display: flex;
+  border: 1px solid #999;
+  position: relative;
+}
+.phone-input input {
+  flex: 1 1;
+  padding: 11px;
+  display: block;
+  border: none;
+}
+.phone-input .country-code {
+  flex: 0 1 122px;
+  box-sizing: border-box;
+  padding: 11px;
+  display: block;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #999;
+}
+.country-code .dial-code {
+  margin: 0 7px 0 0;
+  flex: 1 1;
+}
+.middle-contry-code-dropdown-block {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.6s;
+  padding: 0 19px;
+  width: 100%;
+  list-style: none;
+  background: #fff;
+  margin: 1px -19px 0;
+  opacity: 0;
+  display: flex;
+  align-items: flex-start;
+}
+.open .middle-contry-code-dropdown-block {
+  max-height: 198px;
+  height: 198px;
+  opacity: 1;
+}
+.middle-contry-code-dropdown-list {
+  flex: 1 1;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  font-size: 15px;
+  transition: all 0.19s;
+}
+.middle-contry-code-dropdown-list li {
+  padding: 5px 11px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.middle-contry-code-dropdown-list li:hover {
+  cursor: pointer;
+  background: #f0f0f0;
+}
+.country-flag span,
+.country-flag-item span {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  background: url("../img/flags.png") no-repeat;
+  margin: 0 7px 0 0;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.15);
+}
+.code-arrow {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 7px solid #666;
+}
+.open .code-arrow {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 7px solid #666;
+  border-top: none;
+}
+.middle-contry-code-dropdown-line-area {
+  flex: 0 1 7px;
+  min-width: 7px;
+  padding: 7px 1px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.middle-contry-code-dropdown-line {
+  background: #999;
+  height: 18px;
+  border-radius: 7px;
+  position: relative;
+  top: 0;
+  transition: all 0.19s;
+}
